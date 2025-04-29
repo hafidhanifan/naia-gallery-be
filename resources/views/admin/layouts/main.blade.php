@@ -10,13 +10,13 @@
 
 <body>
     @include('admin.partials.header')
-    @include('admin.partials.sidebar')
+    {{-- @include('admin.partials.sidebar') --}}
 
     <div>
         @yield('content')
     </div>
 
-    @include('admim.partials.footer')
+    {{-- @include('admim.partials.footer') --}}
 </body>
 
 </html>

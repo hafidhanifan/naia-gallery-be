@@ -17,7 +17,7 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <a href="{{ " /" | relURL }}" class="text-md font-semibold flex items-center lg:mr-1.5">
+                <a href="#" class="text-md font-semibold flex items-center lg:mr-1.5">
                     <img src="/images/logo.svg" class="mr-2 h-8" alt="Creative Tim Logo">
                     <span class="hidden md:inline-block self-center text-xl font-bold whitespace-nowrap">Soft UI
                         Flowbite</span>
