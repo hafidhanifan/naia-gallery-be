@@ -4,6 +4,7 @@ export default {
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
+        "./node_modules/flowbite/**/*.js",
     ],
     safelist: [
         "w-64",
@@ -188,5 +189,5 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [require("flowbite/plugin")],
 };
