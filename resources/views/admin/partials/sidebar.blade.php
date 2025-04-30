@@ -24,9 +24,10 @@
                         </form>
                     </li>
                     <li>
-                        <a href="{{ url('/') }}" class="flex items-center py-2.5 px-4 text-base font-normal text-dark-500 rounded-lg hover:bg-gray-200 group {{ request()->is('/') ? 'bg-white shadow-lg shadow-gray-200 hover:!bg-white' : '' }}
+                        <a href="#" class="flex items-center py-2.5 px-4 text-base font-normal text-dark-500 rounded-lg hover:bg-gray-200 group {{ $page_slug ===
+                            'soft-ui-flowbite' ? 'bg-white shadow-lg shadow-gray-200 hover:!bg-white' : '' }}
                             transition-all duration-200" sidebar-toggle-collapse>
-                            <div class="bg-white shadow-lg shadow-gray-300 {{ request()->is('/') ? 'bg-fuchsia-500 !text-white' : ''}} text-dark-700 w-8 h-8 p-2.5 mr-1 rounded-lg
+                            <div class="bg-white shadow-lg shadow-gray-300 {{ $page_slug === 'soft-ui-flowbite' ? 'bg-fuchsia-500 !text-white' : ''}} text-dark-700 w-8 h-8 p-2.5 mr-1 rounded-lg
                                 text-center grid place-items-center">
                                 <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
