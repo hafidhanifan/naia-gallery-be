@@ -3,7 +3,7 @@
 
 @section('content')
 
-<div class="px-4 pt-96">
+<div class="px-4 pt-6">
     <div class="grid grid-cols-1 gap-6 mb-6 w-full xl:grid-cols-2 2xl:grid-cols-4">
         <x-card>
             <div class="flex items-center">

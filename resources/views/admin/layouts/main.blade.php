@@ -14,12 +14,14 @@
 
 <body>
     @include('admin.partials.header')
-    @include('admin.partials.sidebar')
-
-    <div>
-        @yield('content')
+    <div class="flex overflow-hidden bg-white pt-16">
+        @include('admin.partials.sidebar')
+        <div id="main-content" class="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
+            <main>
+                @yield('content')
+            </main>
+        </div>
     </div>
-
     {{-- @include('admim.partials.footer') --}}
 </body>
 
