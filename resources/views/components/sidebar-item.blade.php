@@ -13,6 +13,5 @@ $isActive = trim($activePath, '/') === ''
              text-center grid place-items-center">
         {!! $icon !!}
     </div>
-
     <span class="ml-3 text-dark-500 text-sm font-light" sidebar-toggle-item>{{ $label }}</span>
 </a>
