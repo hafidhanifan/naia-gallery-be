@@ -6,8 +6,6 @@ use App\Http\Controllers\Controller;
 class DashboardController extends Controller 
 {
     public function index(){
-        return view('admin.dashboard',[
-            'page_slug' => 'soft-ui-flowbite'
-        ]);
+        return view('admin.dashboard');
     }
 }
