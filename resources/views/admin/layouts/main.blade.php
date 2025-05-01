@@ -23,6 +23,7 @@
         </div>
     </div>
     {{-- @include('admim.partials.footer') --}}
+    @include('admin.partials.scripts')
 </body>
 
 </html>
