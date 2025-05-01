@@ -18,8 +18,7 @@
                     </svg>
                 </button>
                 <a href="#" class="text-md font-semibold flex items-center lg:mr-1.5">
-                    {{-- <img src="/images/logo.svg" class="mr-2 h-8" alt="Creative Tim Logo"> --}}
-                    <div class="mr-12 h-8"></div>
+                    <img src="{{ asset('assets/images/logo.svg') }}" class="mr-2 h-8" alt="Creative Tim Logo">
                     <span class="hidden md:inline-block self-center text-xl font-bold whitespace-nowrap">Naia
                         Management</span>
                 </a>
