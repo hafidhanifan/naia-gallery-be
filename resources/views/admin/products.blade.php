@@ -150,8 +150,8 @@
                                 <div class="text-base font-semibold text-gray-900"></div>
                                 <div class="text-sm font-normal text-gray-500"></div>
                             </td>
-                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5"></td>
-                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5"></td>
+                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">TEST</td>
+                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">TEST</td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5"></td>
                             <td class="p-4 space-x-2 whitespace-nowrap lg:p-5">
                                 <button type="button" data-modal-toggle="product-modal"
