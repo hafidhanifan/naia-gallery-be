@@ -19,8 +19,8 @@
                 </button>
                 <a href="#" class="text-md font-semibold flex items-center lg:mr-1.5">
                     <img src="{{ asset('assets/images/logo.svg') }}" class="mr-2 h-8" alt="Creative Tim Logo">
-                    <span class="hidden md:inline-block self-center text-xl font-bold whitespace-nowrap">Naia
-                        Management</span>
+                    <span
+                        class="hidden md:inline-block self-center text-xl font-bold whitespace-nowrap">NaiaGallery</span>
                 </a>
                 <form action="#" method="GET" class="hidden lg:block lg:pl-8">
                     <label for="topbar-search" class="sr-only">Search</label>
