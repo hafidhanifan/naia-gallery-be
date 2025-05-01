@@ -4,7 +4,6 @@ $isActive = trim($activePath, '/') === ''
 : request()->is(trim($activePath, '/'));
 @endphp
 
-
 <a href="{{ url($route) }}" class="flex items-center py-2.5 px-4 text-base font-normal text-dark-500 rounded-lg hover:bg-gray-200 group
        {{ $isActive ? 'bg-white shadow-lg shadow-gray-200 hover:!bg-white' : '' }}
        transition-all duration-200" sidebar-toggle-collapse>
