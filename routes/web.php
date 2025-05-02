@@ -10,8 +10,8 @@ Route::middleware('guest')->group(function() {
 });
 
 Route::middleware('auth')->group(function(){
-    Route::get('/dashborad', [DashboardController::class, 'showDashboardPage'])->name('dashboard');
-    Route::get('/products', [ProductsController::class, 'showProductsPage'])->name('products');
+    Route::get('/dashborad', [DashboardController::class, 'showDashboardPage'])->name('dashboardPage');
+    Route::get('/products', [ProductsController::class, 'showProductsPage'])->name('productsPage');
 });
 // Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
 // });
