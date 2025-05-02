@@ -43,7 +43,8 @@
                     </svg>
                 </a>
             </div>
-            <form class="mt-8 space-y-6" action="#">
+            <form method="POST" action="{{ url('/handle-login') }}" class="mt-8 space-y-6" action="#">
+                @csrf
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
                     <input type="email" name="email" id="email"
@@ -55,17 +56,6 @@
                     <input type="password" name="password" id="password" placeholder="••••••••"
                         class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
                         required>
-                </div>
-                <div class="flex items-start">
-                    <div class="flex items-center h-5">
-                        <input id="remember" aria-describedby="remember" name="remember" type="checkbox"
-                            class="w-5 h-5  rounded border-gray-300 focus:outline-none focus:ring-0 checked:bg-dark-900"
-                            required>
-                    </div>
-                    <div class="ml-3 text-sm">
-                        <label for="remember" class="font-medium text-gray-900">Remember me</label>
-                    </div>
-                    <a href="#" class="ml-auto text-sm text-fuchsia-600 hover:underline">Lost Password?</a>
                 </div>
                 <button type="submit"
                     class="py-3 px-5 w-full text-base font-medium text-center text-white bg-gradient-to-br from-pink-500 to-voilet-500 hover:scale-[1.02] shadow-md shadow-gray-300 transition-transform rounded-lg sm:w-auto">Login

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -11,7 +12,7 @@ class LoginController extends Controller
         return view('admin.sign-in');
     }
 
-    public function handleLogin () {
+    public function handleLogin (Request $request) {
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -19,8 +20,8 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate(); // Menghindari session fixation
-            return redirect()->intended('dashboard');
-        }
+            return redirect()->intended('dashboardPage');
+        } 
 
         return back()->withErrors([
             'email' => 'Email atau password salah',
