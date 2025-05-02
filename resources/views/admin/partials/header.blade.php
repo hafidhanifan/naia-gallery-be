@@ -51,20 +51,39 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <a class="github-button" href="https://github.com/creativetimofficial/soft-ui-flowbite"
-                    data-color-scheme="no-preference: dark; light: light; dark: light;" data-icon="octicon-star"
-                    data-size="large" data-show-count="true"
-                    aria-label="Star creativetimofficial/soft-ui-flowbite on GitHub">Star</a>
-                <a href="https://www.creative-tim.com/product/soft-ui-dashboard-pro-flowbite" target="_blank"
-                    class="sm:inline-flex ml-5 text-white bg-gradient-to-br from-pink-500 to-voilet-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-3 shadow-md shadow-gray-300 hover:scale-[1.02] transition-transform">
-                    <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z">
-                        </path>
-                    </svg>
-                    Upgrade to Pro
-                </a>
+
+                <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown"
+                    data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer"
+                    src="/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
+
+                <!-- Dropdown menu -->
+                <div id="userDropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+                    <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                        <div>Bonnie Green</div>
+                        <div class="font-medium truncate">name@flowbite.com</div>
+                    </div>
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                        </li>
+                    </ul>
+                    <div class="py-1">
+                        <a href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                            out</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
