@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\ProductsController;
 
 Route::middleware('guest')->group(function() {
     Route::get('/',[LoginController::class, 'showLoginPage'])->name('login');
-    Route::post('/', [LoginController::class, 'login']);
+    Route::post('/handle-login', [LoginController::class, 'handleLogin']);
 });
 
 Route::middleware('auth')->group(function(){
