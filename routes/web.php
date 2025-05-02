@@ -10,8 +10,8 @@ Route::middleware('guest')->group(function() {
     Route::post('/handle-login', [LoginController::class, 'handleLogin']);
 });
 
-Route::middleware('auth')->group(function(){
-    Route::get('/dashborad', [DashboardController::class, 'showDashboardPage'])->name('dashboardPage');
+Route::middleware('auth:admin')->group(function(){
+    Route::get('/dashboard', [DashboardController::class, 'showDashboardPage'])->name('dashboardPage');
     Route::get('/products', [ProductsController::class, 'showProductsPage'])->name('productsPage');
 });
 // Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {

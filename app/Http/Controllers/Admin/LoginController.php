@@ -18,9 +18,9 @@ class LoginController extends Controller
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate(); // Menghindari session fixation
-            return redirect()->intended('dashboardPage');
+        if (Auth::guard('admin')->attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('dashboard');
         } 
 
         return back()->withErrors([
