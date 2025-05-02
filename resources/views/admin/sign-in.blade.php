@@ -2,6 +2,7 @@
 @section('title', "Login Page")
 
 @section('content')
+
 <div class="flex flex-col justify-center items-center px-6 pt-8 mx-auto md:h-screen pt:mt-0">
     <a href="{{}}" class="flex justify-center items-center mb-8 text-2xl font-semibold lg:mb-10">
         <img src="/images/logo.svg" class="mr-4 h-10" alt="Creative Tim Logo">
@@ -77,4 +78,5 @@
         </div>
     </div>
 </div>
+
 @endsection
