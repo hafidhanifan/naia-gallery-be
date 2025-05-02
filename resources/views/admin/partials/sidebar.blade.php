@@ -24,7 +24,7 @@
                         </form>
                     </li>
                     <li>
-                        <x-sidebar-item label="Dashborad" route="/" activePath="/"
+                        <x-sidebar-item label="Dashboard" route="/dashboard" activePath="/dashboard"
                             :icon="view('partials.icons.dashboard')" />
                     </li>
                     <li>
