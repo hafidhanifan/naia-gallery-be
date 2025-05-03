@@ -11,6 +11,7 @@ class Dress extends Model
 
     protected $fillable = [
         'name',
+        'category',
         'description',
         'price_per_day',
         'stock',
