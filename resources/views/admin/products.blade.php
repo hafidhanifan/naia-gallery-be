@@ -329,9 +329,9 @@
                     @csrf
                     <div class="grid grid-cols-6 gap-6">
                         <div class="col-span-6 sm:col-span-3">
-                            <label for="product-name" class="block mb-2 text-sm font-medium text-gray-900">Dress
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Dress
                                 Name</label>
-                            <input type="text" name="product-name" id="product-name"
+                            <input type="text" name="name" id="product-name"
                                 class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
                                 placeholder="Silk Symphony”" required>
                         </div>
@@ -348,16 +348,16 @@
                                 placeholder="100" required>
                         </div>
                         <div class="col-span-6 sm:col-span-3">
-                            <label for="price" class="block mb-2 text-sm font-medium text-gray-900">Price Per
+                            <label for="price_per_day" class="block mb-2 text-sm font-medium text-gray-900">Price Per
                                 Day</label>
-                            <input type="number" name="price" id="price"
+                            <input type="number" name="price_per_day" id="price"
                                 class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
                                 placeholder="$2300" required>
                         </div>
                         <div class="col-span-full">
-                            <label for="product-details" class="block mb-2 text-sm font-medium text-gray-900">Product
+                            <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Product
                                 Details</label>
-                            <textarea id="product-details" rows="6"
+                            <textarea id="description" name="description" rows="6"
                                 class="block p-4 w-full text-gray-900 border border-gray-300 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300"
                                 placeholder="A timeless dress crafted from premium silk or chiffon, designed to flatter your silhouette with effortless grace. Delicate lace or shimmering sequin details add a touch of glamour, while a sleek V-neck or backless cut enhances sophistication. Perfect for galas, weddings, or special evenings. Pair with heels and dainty jewelry for a polished finish"></textarea>
                         </div>
@@ -374,7 +374,7 @@
                                 <p class="py-1 text-sm text-gray-600">Upload a file or drag and drop</p>
                                 <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
                             </div>
-                            <input type="file" class="hidden" />
+                            <input type="file" name="image" class="hidden" />
                         </label>
                     </div>
             </div>
