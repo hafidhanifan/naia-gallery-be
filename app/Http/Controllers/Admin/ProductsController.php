@@ -28,7 +28,6 @@ class ProductsController extends Controller {
         Dress::create($validated);
 
 
-
         return redirect()->route('admin.products')->with('success', 'Dress berhasil ditambahkan');
     }
 }
