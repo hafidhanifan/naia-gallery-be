@@ -122,22 +122,25 @@
                                 </div>
                             </th>
                             <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
-                                Product Name
+                                Dress Name
                             </th>
                             <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
-                                Technology
+                                Stock
                             </th>
                             <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
-                                ID
+                                Category
                             </th>
                             <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
-                                Price
+                                Description
                             </th>
-                            <th scope="col" class="p-4 lg:p-5">
+                            <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
+                                Action
                             </th>
+
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
+                        @foreach ($dresses as $dress)
                         <tr class="hover:bg-gray-100">
                             <td class="p-4 w-4 lg:p-5">
                                 <div class="flex items-center">
@@ -147,8 +150,8 @@
                                 </div>
                             </td>
                             <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap lg:p-5">
-                                <div class="text-base font-semibold text-gray-900"></div>
-                                <div class="text-sm font-normal text-gray-500"></div>
+                                <div class="text-base font-semibold text-gray-900">XXX</div>
+                                <div class="text-sm font-normal text-gray-500">XXX</div>
                             </td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">TEST</td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">TEST</td>
@@ -181,6 +184,7 @@
                                 </button>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

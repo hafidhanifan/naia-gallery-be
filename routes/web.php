@@ -18,5 +18,3 @@ Route::middleware('auth:admin')->group(function(){
     // Action Handle
     Route::post('/add-product', [ProductsController::class, 'addProduct'])->name('addProduct');
 });
-// Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
-// });
