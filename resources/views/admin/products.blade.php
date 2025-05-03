@@ -92,7 +92,7 @@
                         </svg>
                     </a>
                 </div>
-                <button type="button" data-modal-toggle="add-product-modal"
+                <button type="button" data-modal-target="add-product-modal" data-modal-toggle="add-product-modal"
                     class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-gradient-to-br from-pink-500 to-voilet-500 sm:ml-auto shadow-md shadow-gray-300 hover:scale-[1.02] transition-transform">
                     <svg class="mr-2 -ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -154,7 +154,8 @@
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">TEST</td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5"></td>
                             <td class="p-4 space-x-2 whitespace-nowrap lg:p-5">
-                                <button type="button" data-modal-toggle="product-modal"
+                                <button type="button" data-modal-target="product-modal"
+                                    data-modal-toggle="product-modal"
                                     class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 hover:text-gray-900 hover:scale-[1.02] transition-all">
                                     <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -167,7 +168,8 @@
                                     </svg>
                                     Edit item
                                 </button>
-                                <button type="button" data-modal-toggle="delete-product-modal"
+                                <button type="button" data-modal-target="delete-product-modal"
+                                    data-modal-toggle="delete-product-modal"
                                     class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-gradient-to-br from-red-400 to-red-600 rounded-lg shadow-md shadow-gray-300 hover:scale-[1.02] transition-transform">
                                     <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
