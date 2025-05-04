@@ -150,7 +150,7 @@
                                 </div>
                             </td>
                             <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap lg:p-5">
-                                <div class="text-base font-semibold text-gray-900">XXX</div>
+                                <div class="text-base font-semibold text-gray-900">{{}}</div>
                                 <div class="text-sm font-normal text-gray-500">XXX</div>
                             </td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">TEST</td>
