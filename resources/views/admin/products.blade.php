@@ -149,14 +149,19 @@
                                     <label for="" class="sr-only">checkbox</label>
                                 </div>
                             </td>
-                            <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap lg:p-5">
-                                <div class="text-base font-semibold text-gray-900">{{ $dress->name }}</div>
+                            <td class="p-4 text-sm font-normal text-gray-500 lg:p-5">
+                                {{-- <div class="text-base font-semibold text-gray-900">{{ $dress->name }}</div> --}}
+                                <div class="text-base font-semibold text-gray-900">Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Odio repellat tempore fugiat architecto corporis
+                                    deleniti quia repudiandae assumenda placeat explicabo.</div>
                                 <div class="text-sm font-normal text-gray-500">XXX</div>
                             </td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">{{
                                 $dress->stock }}</td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">TEST</td>
-                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5"></td>
+                            <td class="p-4 text-base font-medium text-gray-900 lg:p-5">Lorem ipsum
+                                dolor sit amet consectetur adipisicing elit. Itaque cupiditate sunt mollitia labore
+                                explicabo laudantium. Natus similique placeat porro eveniet.</td>
                             <td class="p-4 space-x-2 whitespace-nowrap lg:p-5">
                                 <button type="button" data-modal-target="product-modal"
                                     data-modal-toggle="product-modal"
