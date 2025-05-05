@@ -159,9 +159,15 @@
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">{{
                                 $dress->stock }}</td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">TEST</td>
-                            <td class="p-4 text-base font-medium text-gray-900 lg:p-5">Lorem ipsum
-                                dolor sit amet consectetur adipisicing elit. Itaque cupiditate sunt mollitia labore
-                                explicabo laudantium. Natus similique placeat porro eveniet.</td>
+                            <td class="p-4  lg:p-5">
+                                <div class="text-sm font-medium text-gray-900 line-clamp-3 overflow-hidden">Lorem ipsum
+                                    dolor sit, amet consectetur adipisicing elit. Dicta provident, magni beatae adipisci
+                                    corporis, perferendis tempora reiciendis mollitia porro, fuga distinctio consectetur
+                                    molestias maiores fugit corrupti deleniti vero. Nulla aut sunt aperiam excepturi
+                                    velit quidem ad vitae eveniet odio, possimus veritatis esse iure vel praesentium
+                                    maxime dolorum tenetur eius impedit.
+                                </div>
+                            </td>
                             <td class="p-4 space-x-2 whitespace-nowrap lg:p-5">
                                 <button type="button" data-modal-target="product-modal"
                                     data-modal-toggle="product-modal"
