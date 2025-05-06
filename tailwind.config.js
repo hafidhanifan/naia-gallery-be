@@ -190,4 +190,7 @@ export default {
         },
     },
     plugins: [require("flowbite/plugin")],
+    css: {
+        devSourcemap: process.env.NODE_ENV !== "production", // Hanya aktif di dev
+    },
 };
