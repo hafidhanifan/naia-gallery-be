@@ -114,12 +114,15 @@
                 <table class="min-w-full divide-y divide-gray-200 table-fixed">
                     <thead class="bg-white">
                         <tr>
-                            <th scope="col" class="p-4 lg:p-5">
+                            {{-- <th scope="col" class="p-4 lg:p-5">
                                 <div class="flex items-center">
                                     <input id="checkbox-all" aria-describedby="checkbox-1" type="checkbox"
                                         class="w-5 h-5 rounded border-gray-300 focus:ring-0 checked:bg-dark-900">
                                     <label for="checkbox-all" class="sr-only">checkbox</label>
                                 </div>
+                            </th> --}}
+                            <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
+                                Dress Image
                             </th>
                             <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
                                 Dress Name
@@ -140,7 +143,8 @@
                         @foreach ($dresses as $dress)
                         <tr class="hover:bg-gray-100">
                             <td class="p-4  lg:p-5">
-                                <img src="{{ asset('storage/'.$dress->image) }}" alt="{{ $dress->name }}" class="">
+                                <img src="{{ asset('storage/'.$dress->image) }}" alt="{{ $dress->name }}"
+                                    class="w-64 aspect-[2/3] object-cover">
                             </td>
                             <td class="p-4 text-sm font-normal text-gray-500 lg:p-5">
                                 <div class="text-base font-semibold text-gray-900">{{ $dress->name }}</div>
