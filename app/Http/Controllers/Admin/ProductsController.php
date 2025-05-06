@@ -28,6 +28,6 @@ class ProductsController extends Controller {
 
         Dress::create($validated);
 
-        return redirect()->route('productsPage')->with('success', 'Dress berhasil ditambahkan');
+        return redirect()->route('productsPage')->with('Success', 'The product has been added successfully!');
     }
 }
