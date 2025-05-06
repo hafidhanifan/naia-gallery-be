@@ -446,4 +446,11 @@
     </div>
 </div>
 
+@foreach (['success', 'error', 'info', 'warning'] as $msg)
+@if(session($msg))
+<x-alert :type="$msg" :message="session($msg)" />
+@endif
+@endforeach
+
+
 @endsection
