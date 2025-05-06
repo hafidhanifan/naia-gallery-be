@@ -190,7 +190,4 @@ export default {
         },
     },
     plugins: [require("flowbite/plugin")],
-    css: {
-        devSourcemap: false,
-    },
 };

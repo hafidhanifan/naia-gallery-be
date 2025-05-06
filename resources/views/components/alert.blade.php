@@ -7,7 +7,15 @@ $colors = [
 'error' => ['bg' => 'bg-red-50', 'text' => 'text-red-800', 'border' => 'border-red-300', 'icon' => 'text-red-400'],
 'info' => ['bg' => 'bg-blue-50', 'text' => 'text-blue-800', 'border' => 'border-blue-300', 'icon' => 'text-blue-400'],
 'warning' => ['bg' => 'bg-yellow-50', 'text' => 'text-yellow-800', 'border' => 'border-yellow-300', 'icon' =>
-'text-yellow-400'],
+'text-yellow-400']
+];
+
+$titles = [
+'success' => 'Success!',
+'error' => 'Error!',
+'info' => 'Info!',
+'warning' => 'Warning!',
+
 ];
 @endphp
 
@@ -15,7 +23,7 @@ $colors = [
 <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)"
     x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100 translate-y-0"
     x-transition:leave-end="opacity-0 translate-y-4"
-    class="fixed z-50 bottom-4 right-4 max-w-sm w-full flex items-center p-4 mb-4 text-sm {{ $colors[$type]['text'] }} border {{ $colors[$type]['border'] }} rounded-lg {{ $colors[$type]['bg'] }}"
+    class="fixed z-50 bottom-4 right-4 max-w-md w-full flex items-center p-4 mb-4 text-sm {{ $colors[$type]['text'] }} border {{ $colors[$type]['border'] }} rounded-lg {{ $colors[$type]['bg'] }}"
     role="alert">
     <svg class="shrink-0 inline w-4 h-4 me-3 {{ $colors[$type]['icon'] }}" aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -24,6 +32,6 @@ $colors = [
     </svg>
     <span class="sr-only">Info</span>
     <div>
-        <span class="font-medium">{{ $type }}!</span> {{ $message }}
+        <span class="font-medium">{{ $titles[$type] }}</span> {{ $message }}
     </div>
 </div>
