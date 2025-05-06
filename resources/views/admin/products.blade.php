@@ -128,9 +128,6 @@
                                 Stock
                             </th>
                             <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
-                                Category
-                            </th>
-                            <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
                                 Description
                             </th>
                             <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
@@ -146,13 +143,11 @@
                                 <img src="{{ asset('storage/'.$dress->image) }}" alt="{{ $dress->name }}" class="">
                             </td>
                             <td class="p-4 text-sm font-normal text-gray-500 lg:p-5">
-                                {{-- <div class="text-base font-semibold text-gray-900">{{ $dress->name }}</div> --}}
                                 <div class="text-base font-semibold text-gray-900">{{ $dress->name }}</div>
                                 <div class="text-sm font-normal text-gray-500">{{ $dress->category }}</div>
                             </td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">{{
                                 $dress->stock }}</td>
-                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">TEST</td>
                             <td class="p-4  lg:p-5">
                                 <div class="text-sm font-medium text-gray-900 line-clamp-3 overflow-hidden">Lorem ipsum
                                     dolor sit, amet consectetur adipisicing elit. Dicta provident, magni beatae adipisci
