@@ -28,6 +28,10 @@
                             :icon="view('partials.icons.dashboard')" />
                     </li>
                     <li>
+                        <x-sidebar-item label="Categories" route="/categories" activePath="/categories"
+                            :icon="view('partials.icons.categories')" />
+                    </li>
+                    <li>
                         <x-sidebar-item label="Products" route="/products" activePath="/products"
                             :icon="view('partials.icons.products')" />
                     </li>
