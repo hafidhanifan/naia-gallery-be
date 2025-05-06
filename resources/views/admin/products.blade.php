@@ -142,19 +142,13 @@
                     <tbody class="bg-white divide-y divide-gray-200">
                         @foreach ($dresses as $dress)
                         <tr class="hover:bg-gray-100">
-                            <td class="p-4 w-4 lg:p-5">
-                                <div class="flex items-center">
-                                    <input id="" aria-describedby="checkbox-1" type="checkbox"
-                                        class="w-5 h-5 rounded border-gray-300 focus:ring-0 checked:bg-dark-900">
-                                    <label for="" class="sr-only">checkbox</label>
-                                </div>
+                            <td class="p-4  lg:p-5">
+                                <img src="{{ asset('storage/'.$dress->image) }}" alt="{{ $dress->name }}" class="">
                             </td>
                             <td class="p-4 text-sm font-normal text-gray-500 lg:p-5">
                                 {{-- <div class="text-base font-semibold text-gray-900">{{ $dress->name }}</div> --}}
-                                <div class="text-base font-semibold text-gray-900">Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Odio repellat tempore fugiat architecto corporis
-                                    deleniti quia repudiandae assumenda placeat explicabo.</div>
-                                <div class="text-sm font-normal text-gray-500">XXX</div>
+                                <div class="text-base font-semibold text-gray-900">{{ $dress->name }}</div>
+                                <div class="text-sm font-normal text-gray-500">{{ $dress->category }}</div>
                             </td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">{{
                                 $dress->stock }}</td>
