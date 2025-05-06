@@ -12,7 +12,10 @@ $colors = [
 @endphp
 
 
-<div class="flex items-center p-4 mb-4 text-sm {{ $colors[$type]['text'] }} border {{ $colors[$type]['border'] }} rounded-lg {{ $colors[$type]['bg'] }}"
+<div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)"
+    x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100 translate-y-0"
+    x-transition:leave-end="opacity-0 translate-y-4"
+    class="fixed z-50 bottom-4 right-4 max-w-sm w-full flex items-center p-4 mb-4 text-sm {{ $colors[$type]['text'] }} border {{ $colors[$type]['border'] }} rounded-lg {{ $colors[$type]['bg'] }}"
     role="alert">
     <svg class="shrink-0 inline w-4 h-4 me-3 {{ $colors[$type]['icon'] }}" aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
