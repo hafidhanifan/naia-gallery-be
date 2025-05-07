@@ -15,7 +15,7 @@ class ProductsController extends Controller {
     public function addProduct(Request $request) {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'category' => 'nullable|string',
+            // 'category' => 'nullable|string',
             'description' => 'nullable|string',
             'price_per_day' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
