@@ -31,4 +31,14 @@ class CategoriesController extends Controller {
         return redirect()->route('categoriesPage')->with('success', 'Category has been updated successfully!');
 
     }
+
+    public function deleteCategory(Request $request) {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        Category::deleted($validated);
+        return redirect()->route('categoriesPage')->with('success', 'Category has been updated successfully!');
+
+    }
 }

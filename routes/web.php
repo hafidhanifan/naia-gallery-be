@@ -14,10 +14,14 @@ Route::middleware('guest')->group(function() {
 Route::middleware('auth:admin')->group(function(){
     Route::get('/dashboard', [DashboardController::class, 'showDashboardPage'])->name('dashboardPage');
     Route::get('/categories', [CategoriesController::class, 'showCategoriesPage'])->name('categoriesPage');
-    Route::get('/products', [ProductsController::class, 'showProductsPage'])->name('productsPage');
+    Route::get('/dress', [ProductsController::class, 'showProductsPage'])->name('productsPage');
     Route::get('/logout', [LoginController::class, 'handleLogout'])->name('logout');
 
-    // Action Handle
-    Route::post('/add-category', [CategoriesController::class, 'addCategory'])->name('addCategory');
-    Route::post('/add-product', [ProductsController::class, 'addProduct'])->name('addProduct');
+    // Action Handle Category
+    Route::post('/categories/add', [CategoriesController::class, 'addCategory'])->name('addCategory');
+    Route::post('/categories/edit', [CategoriesController::class, 'editCategory'])->name('editCategory');
+    Route::post('/categories/delete', [CategoriesController::class, 'deleteCategory'])->name('deleteCategory');
+
+    // Action Handle Product
+    Route::post('/dress/add', [ProductsController::class, 'addProduct'])->name('addProduct');
 });
