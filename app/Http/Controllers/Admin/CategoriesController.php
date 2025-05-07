@@ -1,12 +1,13 @@
 <?php 
 
 namespace App\Http\Controllers\Admin;
-use App\Models\Dress;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class   CategoriesController extends Controller {
+class CategoriesController extends Controller {
     public function showCategoriesPage(){
-        return view('admin.categories');
+        $categories = Category::all();
+        return view('admin.categories', compact('categories'));
     }
 }
