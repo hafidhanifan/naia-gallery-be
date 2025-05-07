@@ -113,13 +113,6 @@
                 <table class="min-w-full divide-y divide-gray-200 table-fixed">
                     <thead class="bg-white">
                         <tr>
-                            {{-- <th scope="col" class="p-4 lg:p-5">
-                                <div class="flex items-center">
-                                    <input id="checkbox-all" aria-describedby="checkbox-1" type="checkbox"
-                                        class="w-5 h-5 rounded border-gray-300 focus:ring-0 checked:bg-dark-900">
-                                    <label for="checkbox-all" class="sr-only">checkbox</label>
-                                </div>
-                            </th> --}}
                             <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
                                 Category Name
                             </th>
@@ -132,11 +125,9 @@
                     <tbody class="bg-white divide-y divide-gray-200">
                         @foreach ($categories as $category)
                         <tr class="hover:bg-gray-100">
-
                             <td class="p-4 text-sm font-normal text-gray-500 lg:p-5">
-                                <div class="text-base font-semibold text-gray-900">{{ $dress->name }}</div>
+                                <div class="text-base font-semibold text-gray-900">{{ $category->name }}</div>
                             </td>
-
                             <td class="p-4 space-x-2 whitespace-nowrap lg:p-5">
                                 <button type="button" data-modal-target="product-modal"
                                     data-modal-toggle="product-modal"
