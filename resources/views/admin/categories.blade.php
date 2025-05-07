@@ -287,7 +287,7 @@
             <!-- Modal header -->
             <div class="flex justify-between items-start p-5 rounded-t border-b">
                 <h3 class="text-xl font-semibold">
-                    Add product
+                    Add category
                 </h3>
                 <button type="button"
                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-2xl text-sm p-1.5 ml-auto inline-flex items-center"
@@ -301,64 +301,23 @@
             </div>
             <!-- Modal body -->
             <div class="p-6 space-y-6">
-                <form action="{{ route('addProduct') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('addCategory') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="grid grid-cols-6 gap-6">
+                    <div class="grid grid-cols-1">
                         <div class="col-span-6 sm:col-span-3">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Dress
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Category
                                 Name</label>
                             <input type="text" name="name" id="product-name"
                                 class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
-                                placeholder="Silk Symphony”" required>
+                                placeholder="Wedding Dress" required>
                         </div>
-                        {{-- <div class="col-span-6 sm:col-span-3">
-                            <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Category</label>
-                            <input type="text" name="category" id="category"
-                                class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
-                                placeholder="Wedding" required>
-                        </div> --}}
-                        <div class="col-span-6 sm:col-span-3">
-                            <label for="stock" class="block mb-2 text-sm font-medium text-gray-900">Stock</label>
-                            <input type="number" name="stock" id="stock"
-                                class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
-                                placeholder="100" required>
-                        </div>
-                        <div class="col-span-6 sm:col-span-3">
-                            <label for="price_per_day" class="block mb-2 text-sm font-medium text-gray-900">Price Per
-                                Day</label>
-                            <input type="number" name="price_per_day" id="price"
-                                class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
-                                placeholder="$2300" required>
-                        </div>
-                        <div class="col-span-full">
-                            <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Product
-                                Details</label>
-                            <textarea id="description" name="description" rows="6"
-                                class="block p-4 w-full text-gray-900 border border-gray-300 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300"
-                                placeholder="A timeless dress crafted from premium silk or chiffon, designed to flatter your silhouette with effortless grace. Delicate lace or shimmering sequin details add a touch of glamour, while a sleek V-neck or backless cut enhances sophistication. Perfect for galas, weddings, or special evenings. Pair with heels and dainty jewelry for a polished finish"></textarea>
-                        </div>
-                    </div>
-                    <div class="flex justify-center items-center mt-4 w-full">
-                        <label
-                            class="flex flex-col w-full h-32 rounded border-2 border-gray-300 border-dashed cursor-pointer hover:bg-gray-50">
-                            <div class="flex flex-col justify-center items-center pt-5 pb-6">
-                                <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
-                                </svg>
-                                <p class="py-1 text-sm text-gray-600">Upload a file or drag and drop</p>
-                                <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
-                            </div>
-                            <input type="file" name="image" class="hidden" />
-                        </label>
                     </div>
             </div>
             <!-- Modal footer -->
             <div class="p-6 rounded-b border-t border-gray-200">
                 <button
                     class="text-white font-medium text-sm px-5 py-2.5 text-center rounded-lg bg-gradient-to-br from-pink-500 to-voilet-500 shadow-md shadow-gray-300 hover:scale-[1.02] transition-transform"
-                    type="submit">Add product</button>
+                    type="submit">Add category</button>
             </div>
             </form>
         </div>

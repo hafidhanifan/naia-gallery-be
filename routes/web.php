@@ -18,5 +18,6 @@ Route::middleware('auth:admin')->group(function(){
     Route::get('/logout', [LoginController::class, 'handleLogout'])->name('logout');
 
     // Action Handle
+    Route::post('/add-category', [CategoriesController::class, 'addCategory'])->name('addCategory');
     Route::post('/add-product', [ProductsController::class, 'addProduct'])->name('addProduct');
 });

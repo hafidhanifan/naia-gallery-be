@@ -10,4 +10,14 @@ class CategoriesController extends Controller {
         $categories = Category::all();
         return view('admin.categories', compact('categories'));
     }
+
+    public function addCategory(Request $request) {
+        $validated = $request->validate([
+            'category_name' => 'required|string|max:255',
+        ]);
+
+        Category::create($validated);
+
+        return redirect()->route('categoriesPage')->with('success', 'Category has been added successfully!');
+    }
 }
