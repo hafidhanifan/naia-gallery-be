@@ -21,23 +21,22 @@ class CategoriesController extends Controller {
         return redirect()->route('categoriesPage')->with('success', 'Category has been added successfully!');
     }
 
-    public function editCategory(Request $request) {
+    public function editCategory(Request $request, $id) {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
         ]);
 
-        Category::update($validated);
+        $category = Category::findOrFail($id);
+        category->update($validated);
 
         return redirect()->route('categoriesPage')->with('success', 'Category has been updated successfully!');
 
     }
 
-    public function deleteCategory(Request $request) {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-        ]);
+    public function deleteCategory($id) {
+        $category = Category::findOrFail($id);
+        $category->delete();
 
-        Category::deleted($validated);
         return redirect()->route('categoriesPage')->with('success', 'Category has been updated successfully!');
 
     }
