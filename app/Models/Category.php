@@ -9,7 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama'];
+    protected $fillable = ['name'];
 
     // Relasi: Satu kategori memiliki banyak dress
     public function dresses()

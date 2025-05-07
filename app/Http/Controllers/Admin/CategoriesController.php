@@ -13,7 +13,7 @@ class CategoriesController extends Controller {
 
     public function addCategory(Request $request) {
         $validated = $request->validate([
-            'category_name' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
         ]);
 
         Category::create($validated);
