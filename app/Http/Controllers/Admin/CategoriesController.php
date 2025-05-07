@@ -20,4 +20,15 @@ class CategoriesController extends Controller {
 
         return redirect()->route('categoriesPage')->with('success', 'Category has been added successfully!');
     }
+
+    public function editCategory(Request $request) {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        Category::update($validated);
+
+        return redirect()->route('categoriesPage')->with('success', 'Category has been updated successfully!');
+
+    }
 }
