@@ -45,7 +45,7 @@
                     </li>
                 </ol>
             </nav>
-            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">All products</h1>
+            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">All Dress Categories</h1>
         </div>
         <div class="block items-center sm:flex md:divide-x md:divide-gray-100">
             <form class="mb-4 sm:pr-3 sm:mb-0" action="#" method="GET">
