@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Dress;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 
 
 class ProductsController extends Controller {
     public function showProductsPage() {
         $dresses = Dress::all();
-        return view('admin.products', compact('dresses'));
+        $categories = Category::all();
+        return view('admin.products', compact('dresses', 'categories'));
     }
 
     public function addProduct(Request $request) {
