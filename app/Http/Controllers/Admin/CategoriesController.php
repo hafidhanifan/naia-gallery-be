@@ -27,7 +27,7 @@ class CategoriesController extends Controller {
         ]);
 
         $category = Category::findOrFail($id);
-        category->update($validated);
+        $category->update($validated);
 
         return redirect()->route('categoriesPage')->with('success', 'Category has been updated successfully!');
 
