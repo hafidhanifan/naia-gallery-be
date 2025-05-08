@@ -32,7 +32,7 @@
                             :icon="view('partials.icons.categories')" />
                     </li>
                     <li>
-                        <x-sidebar-item label="Products" route="/products" activePath="/products"
+                        <x-sidebar-item label="Products" route="/dress" activePath="/dress"
                             :icon="view('partials.icons.products')" />
                     </li>
                 </ul>
