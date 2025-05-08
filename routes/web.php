@@ -21,6 +21,7 @@ Route::middleware('auth:admin')->group(function(){
     Route::post('/categories/add', [CategoriesController::class, 'addCategory'])->name('addCategory');
     Route::post('/categories/edit/{id}', [CategoriesController::class, 'editCategory'])->name('editCategory');
     Route::post('/categories/delete/{id}', [CategoriesController::class, 'deleteCategory'])->name('deleteCategory');
+    
 
     // Action Handle Product
     Route::post('/dress/add', [ProductsController::class, 'addProduct'])->name('addProduct');
