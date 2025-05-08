@@ -208,98 +208,99 @@
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Add Product Modal -->
-    <div class="hidden overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center md:inset-0 h-modal sm:h-full"
-        id="add-product-modal">
-        <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
-            <!-- Modal content -->
-            <div class="relative bg-white rounded-2xl shadow-lg">
-                <!-- Modal header -->
-                <div class="flex justify-between items-start p-5 rounded-t border-b">
-                    <h3 class="text-xl font-semibold">
-                        Add category
-                    </h3>
-                    <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-2xl text-sm p-1.5 ml-auto inline-flex items-center"
-                        data-modal-toggle="add-product-modal">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <div class="p-6 space-y-6">
-                    <form action="{{ route('addCategory') }}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <div class="grid grid-cols-1">
-                            <div class="col-span-6 sm:col-span-3">
-                                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Category
-                                    Name</label>
-                                <input type="text" name="name" id="product-name"
-                                    class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
-                                    placeholder="Wedding Dress" required>
-                            </div>
-                        </div>
-                </div>
-                <!-- Modal footer -->
-                <div class="p-6 rounded-b border-t border-gray-200">
-                    <button
-                        class="text-white font-medium text-sm px-5 py-2.5 text-center rounded-lg bg-gradient-to-br from-pink-500 to-voilet-500 shadow-md shadow-gray-300 hover:scale-[1.02] transition-transform"
-                        type="submit">Add category</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Delete Product Modal -->
-    <div class="hidden overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center md:inset-0 h-modal sm:h-full"
-        id="delete-product-modal">
-        <div class="relative px-4 w-full max-w-md h-full md:h-auto">
-            <!-- Modal content -->
-            <div class="relative bg-white rounded-2xl shadow-lg">
-                <!-- Modal header -->
-                <div class="flex justify-end p-2">
-                    <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-2xl text-sm p-1.5 ml-auto inline-flex items-center"
-                        data-modal-toggle="delete-product-modal">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <div class="p-6 pt-0 text-center">
-                    <svg class="mx-auto w-20 h-20 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+<!-- Add Product Modal -->
+<div class="hidden overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center md:inset-0 h-modal sm:h-full"
+    id="add-product-modal">
+    <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-2xl shadow-lg">
+            <!-- Modal header -->
+            <div class="flex justify-between items-start p-5 rounded-t border-b">
+                <h3 class="text-xl font-semibold">
+                    Add category
+                </h3>
+                <button type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-2xl text-sm p-1.5 ml-auto inline-flex items-center"
+                    data-modal-toggle="add-product-modal">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
                     </svg>
-                    <h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Are you sure you want to delete this
-                        product?
-                    </h3>
-                    <a href="#"
-                        class="text-white bg-gradient-to-br from-red-400 to-red-600 font-medium rounded-lg text-base inline-flex items-center px-3 py-2.5 text-center mr-2 shadow-md shadow-gray-300 hover:scale-[1.02] transition-transform">
-                        Yes, I'm sure
-                    </a>
-                    <a href="#"
-                        class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 font-medium inline-flex items-center rounded-lg text-base px-3 py-2.5 text-center hover:scale-[1.02] transition-transform"
-                        data-modal-toggle="delete-product-modal">
-                        No, cancel
-                    </a>
-                </div>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6 space-y-6">
+                <form action="{{ route('addCategory') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="grid grid-cols-1">
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Category
+                                Name</label>
+                            <input type="text" name="name" id="product-name"
+                                class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
+                                placeholder="Wedding Dress" required>
+                        </div>
+                    </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="p-6 rounded-b border-t border-gray-200">
+                <button
+                    class="text-white font-medium text-sm px-5 py-2.5 text-center rounded-lg bg-gradient-to-br from-pink-500 to-voilet-500 shadow-md shadow-gray-300 hover:scale-[1.02] transition-transform"
+                    type="submit">Add category</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Product Modal -->
+<div class="hidden overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center md:inset-0 h-modal sm:h-full"
+    id="delete-product-modal">
+    <div class="relative px-4 w-full max-w-md h-full md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-2xl shadow-lg">
+            <!-- Modal header -->
+            <div class="flex justify-end p-2">
+                <button type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-2xl text-sm p-1.5 ml-auto inline-flex items-center"
+                    data-modal-toggle="delete-product-modal">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6 pt-0 text-center">
+                <svg class="mx-auto w-20 h-20 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Are you sure you want to delete this
+                    product?
+                </h3>
+                <a href="#"
+                    class="text-white bg-gradient-to-br from-red-400 to-red-600 font-medium rounded-lg text-base inline-flex items-center px-3 py-2.5 text-center mr-2 shadow-md shadow-gray-300 hover:scale-[1.02] transition-transform">
+                    Yes, I'm sure
+                </a>
+                <a href="#"
+                    class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 font-medium inline-flex items-center rounded-lg text-base px-3 py-2.5 text-center hover:scale-[1.02] transition-transform"
+                    data-modal-toggle="delete-product-modal">
+                    No, cancel
+                </a>
             </div>
         </div>
     </div>
+</div>
 
-    @foreach (['success', 'error', 'info', 'warning'] as $msg)
-    @if(session($msg))
-    <x-alert :type="$msg" :message="session($msg)" />
-    @endif
-    @endforeach
-    @endsection
+@foreach (['success', 'error', 'info', 'warning'] as $msg)
+@if(session($msg))
+<x-alert :type="$msg" :message="session($msg)" />
+@endif
+@endforeach
+@endsection
