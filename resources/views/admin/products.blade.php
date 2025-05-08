@@ -342,14 +342,21 @@
                                 Name</label>
                             <input type="text" name="name" id="product-name"
                                 class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
-                                placeholder="Silk Symphony”" required>
+                                placeholder="Silk Symphony" required>
                         </div>
-                        {{-- <div class="col-span-6 sm:col-span-3">
-                            <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Category</label>
-                            <input type="text" name="category" id="category"
-                                class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
-                                placeholder="Wedding" required>
-                        </div> --}}
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="countries"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an
+                                option</label>
+                            <select id="countries"
+                                class="bg-transparent border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5">
+                                <option selected>Choose a country</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                            </select>
+                        </div>
                         <div class="col-span-6 sm:col-span-3">
                             <label for="stock" class="block mb-2 text-sm font-medium text-gray-900">Stock</label>
                             <input type="number" name="stock" id="stock"
