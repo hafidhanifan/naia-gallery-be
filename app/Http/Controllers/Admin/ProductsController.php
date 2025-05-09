@@ -8,13 +8,13 @@ use App\Models\Category;
 
 
 class ProductsController extends Controller {
-    public function showProductsPage() {
+    public function showDressPage() {
         $dresses = Dress::all();
         $categories = Category::all();
         return view('admin.products', compact('dresses', 'categories'));
     }
 
-    public function addProduct(Request $request) {
+    public function addDress(Request $request) {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
            'category_id' => 'required|exists:categories,id', // validasi foreign key
