@@ -17,7 +17,7 @@ class ProductsController extends Controller {
     public function addDress(Request $request) {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-           'category_id' => 'required|exists:categories,id', // validasi foreign key
+            'category_id' => 'required|exists:categories,id', // validasi foreign key
             'description' => 'nullable|string',
             'price_per_day' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
@@ -32,4 +32,5 @@ class ProductsController extends Controller {
 
         return redirect()->route('productsPage')->with('success', 'The product has been added successfully!');
     }
+
 }
