@@ -1,5 +1,5 @@
 @extends('admin.layouts.main')
-@section('title', "Naia Products Management")
+@section('title', "Naia Dress Management")
 
 @section('content')
 
