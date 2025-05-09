@@ -148,7 +148,7 @@
                             </td>
                             <td class="p-4 text-sm font-normal text-gray-500 lg:p-5">
                                 <div class="text-base font-semibold text-gray-900">{{ $dress->name }}</div>
-                                <div class="text-sm font-normal text-gray-500">{{ $dress->category }}</div>
+                                <div class="text-sm font-normal text-gray-500">{{ $dress->category->name ?? '-' }}</div>
                             </td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">{{
                                 $dress->stock }}</td>
