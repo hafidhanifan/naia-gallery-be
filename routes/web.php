@@ -14,7 +14,7 @@ Route::middleware('guest')->group(function() {
 Route::middleware('auth:admin')->group(function(){
     Route::get('/dashboard', [DashboardController::class, 'showDashboardPage'])->name('dashboardPage');
     Route::get('/categories', [CategoriesController::class, 'showCategoriesPage'])->name('categoriesPage');
-    Route::get('/dress', [ProductsController::class, 'showProductsPage'])->name('productsPage');
+    Route::get('/dress', [ProductsController::class, 'showDressPage'])->name('DressPage');
     Route::get('/logout', [LoginController::class, 'handleLogout'])->name('logout');
 
     // Action Handle Category
@@ -24,5 +24,5 @@ Route::middleware('auth:admin')->group(function(){
     
 
     // Action Handle Product
-    Route::post('/dress/add', [ProductsController::class, 'addProduct'])->name('addProduct');
+    Route::post('/dress/add', [ProductsController::class, 'addDress'])->name('addDress');
 });
