@@ -29,7 +29,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                             <a href="#"
-                                class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2">E-commerce</a>
+                                class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2">Dress</a>
                         </div>
                     </li>
                     <li>
@@ -40,13 +40,13 @@
                                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                                     clip-rule="evenodd"></path>
                             </svg>
-                            <span class="ml-1 text-sm font-medium text-gray-400 md:ml-2"
-                                aria-current="page">Products</span>
+                            <span class="ml-1 text-sm font-medium text-gray-400 md:ml-2" aria-current="page">All
+                                Dress</span>
                         </div>
                     </li>
                 </ol>
             </nav>
-            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">All products</h1>
+            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">All Dress</h1>
         </div>
         <div class="block items-center sm:flex md:divide-x md:divide-gray-100">
             <form class="mb-4 sm:pr-3 sm:mb-0" action="#" method="GET">
