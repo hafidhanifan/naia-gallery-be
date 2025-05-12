@@ -155,7 +155,7 @@
                                 </div>
                             </td>
                             <td class="p-4 space-x-2 whitespace-nowrap lg:p-5">
-                                <button type="button" data-modal-target="product-modal"
+                                <button type="button" data-modal-target="edit-dress-{{ $dress->id }}"
                                     data-modal-toggle="product-modal"
                                     class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 hover:text-gray-900 hover:scale-[1.02] transition-all">
                                     <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
