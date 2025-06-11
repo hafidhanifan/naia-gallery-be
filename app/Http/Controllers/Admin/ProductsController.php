@@ -33,4 +33,30 @@ class ProductsController extends Controller {
         return redirect()->route('productsPage')->with('success', 'The product has been added successfully!');
     }
 
+    public function editDress(Request $request, $id) {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'category_id' => 'required|exists:categories,id',
+            'description' => 'nullable|string',
+            'price_per_day' => 'required|numeric|min:0',
+            'stock' => 'required|integer|min:0',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+
+        $dress = Dress::findOrFail($id);
+
+        if ($request->hasFile('image')) {
+                // Hapus image lama jika ada (opsional)
+            if ($dress->image && \Storage::disk('public')->exists($dress->image)) {
+                \Storage::disk('public')->delete($dress->image);
+            }
+                $validated['image'] = $request->file('image')->store('dresses', 'public');
+        }
+        
+            $dress->update($validated);
+
+        return redirect()->route('productsPage')->with('success', 'The product has been updated successfully!');
+    }
+
+
 }
