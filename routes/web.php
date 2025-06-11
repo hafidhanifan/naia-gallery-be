@@ -25,4 +25,5 @@ Route::middleware('auth:admin')->group(function(){
 
     // Action Handle Product
     Route::post('/dress/add', [ProductsController::class, 'addDress'])->name('addDress');
+    Route::post('/dress/edit/{id}', [ProductsController::class, 'editDress'])->name('editDress');
 });
