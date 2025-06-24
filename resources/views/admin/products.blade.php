@@ -220,9 +220,8 @@
                                                 </div>
                                                 <div class="col-span-6 sm:col-span-3">
                                                     <label for="category_id"
-                                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select
-                                                        an
-                                                        option</label>
+                                                        class="block mb-2 text-sm font-medium text-gray-900">Select
+                                                        Categories</label>
                                                     <select id="category_id" name="category_id"
                                                         class="bg-transparent border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5">
                                                         @foreach($categories as $category)
@@ -232,18 +231,22 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-span-6 sm:col-span-3">
-                                                    <label for="brand"
-                                                        class="block mb-2 text-sm font-medium text-gray-900">Brand</label>
-                                                    <input type="text" name="brand" id="brand"
+                                                    <label for="price_per_day"
+                                                        class="block mb-2 text-sm font-medium text-gray-900">Price Per
+                                                        Day</label>
+                                                    <input type="number" name="price_per_day" id="price_per_day"
                                                         class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
-                                                        placeholder="Apple" required>
+                                                        placeholder=""
+                                                        value="{{ old('price_per_day', $dress->price_per_day) }}"
+                                                        required>
                                                 </div>
                                                 <div class="col-span-6 sm:col-span-3">
-                                                    <label for="price"
-                                                        class="block mb-2 text-sm font-medium text-gray-900">Price</label>
-                                                    <input type="number" name="price" id="price"
+                                                    <label for="stock"
+                                                        class="block mb-2 text-sm font-medium text-gray-900">Stock</label>
+                                                    <input type="number" name="stock" id="stock"
                                                         class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
-                                                        placeholder="$2300" required>
+                                                        placeholder="" value="{{ old('stock', $dress->stock) }}"
+                                                        required>
                                                 </div>
                                                 <div class="col-span-full">
                                                     <label for="product-details"
