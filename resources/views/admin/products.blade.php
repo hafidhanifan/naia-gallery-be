@@ -146,12 +146,8 @@
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">{{
                                 $dress->stock }}</td>
                             <td class="p-4  lg:p-5">
-                                <div class="text-sm font-medium text-gray-900 line-clamp-3 overflow-hidden">Lorem ipsum
-                                    dolor sit, amet consectetur adipisicing elit. Dicta provident, magni beatae adipisci
-                                    corporis, perferendis tempora reiciendis mollitia porro, fuga distinctio consectetur
-                                    molestias maiores fugit corrupti deleniti vero. Nulla aut sunt aperiam excepturi
-                                    velit quidem ad vitae eveniet odio, possimus veritatis esse iure vel praesentium
-                                    maxime dolorum tenetur eius impedit.
+                                <div class="text-sm font-medium text-gray-900 line-clamp-3 overflow-hidden">{{
+                                    $dress->description }}
                                 </div>
                             </td>
                             <td class="p-4 space-x-2 whitespace-nowrap lg:p-5">
@@ -231,6 +227,14 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-span-6 sm:col-span-3">
+                                                    <label for="stock"
+                                                        class="block mb-2 text-sm font-medium text-gray-900">Stock</label>
+                                                    <input type="number" name="stock" id="stock"
+                                                        class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
+                                                        placeholder="" value="{{ old('stock', $dress->stock) }}"
+                                                        required>
+                                                </div>
+                                                <div class="col-span-6 sm:col-span-3">
                                                     <label for="price_per_day"
                                                         class="block mb-2 text-sm font-medium text-gray-900">Price Per
                                                         Day</label>
@@ -240,21 +244,13 @@
                                                         value="{{ old('price_per_day', $dress->price_per_day) }}"
                                                         required>
                                                 </div>
-                                                <div class="col-span-6 sm:col-span-3">
-                                                    <label for="stock"
-                                                        class="block mb-2 text-sm font-medium text-gray-900">Stock</label>
-                                                    <input type="number" name="stock" id="stock"
-                                                        class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
-                                                        placeholder="" value="{{ old('stock', $dress->stock) }}"
-                                                        required>
-                                                </div>
                                                 <div class="col-span-full">
-                                                    <label for="product-details"
+                                                    <label for="description"
                                                         class="block mb-2 text-sm font-medium text-gray-900">Product
                                                         Details</label>
-                                                    <textarea id="product-details" rows="6"
+                                                    <textarea id="description" name="description" rows="6"
                                                         class="block p-4 w-full text-gray-900 border border-gray-300 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300"
-                                                        placeholder="e.g. 3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, Ram 16 GB DDR4 2300Mhz"></textarea>
+                                                        placeholder="">{{ old('description', $dress->description) }}</textarea>
                                                 </div>
                                             </div>
                                             <div class="flex my-4 space-x-5">
