@@ -408,6 +408,9 @@
                             </div>
                             <input type="file" name="image" class="hidden" />
                         </label>
+
+                        {{-- Image Preview Section --}}
+                        <div id="previewContainer" class="mt-4 grid grid-cols-3 gap-4"></div>
                     </div>
             </div>
             <!-- Modal footer -->
