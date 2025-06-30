@@ -10,7 +10,7 @@ use App\Models\DressImage;
 
 class ProductsController extends Controller {
     public function showDressPage() {
-        $dresses = Dress::all();
+        $dresses = Dress::with('category')->latest()->get();
         $categories = Category::all();
         return view('admin.products', compact('dresses', 'categories'));
     }
