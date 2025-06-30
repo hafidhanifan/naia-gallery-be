@@ -11,18 +11,9 @@ const addMoreSection = document.getElementById("addMoreSection");
 
 let selectedFiles = [];
 
-imageInput.addEventListener("change", function (e) {
-    const files = Array.from(e.target.files);
-
-    // Sembunyikan upload awal, tampilkan "Add more"
-    uploadSection.classList.add("hidden");
-    addMoreSection.classList.remove("hidden");
-
-    // Kosongkan preview lama
+function renderPreviews() {
     previewContainer.innerHTML = "";
-    selectedFiles = files;
-
-    files.forEach((file, index) => {
+    selectedFiles.forEach((file, index) => {
         const reader = new FileReader();
 
         reader.onload = function (e) {
@@ -37,18 +28,19 @@ imageInput.addEventListener("change", function (e) {
             removeBtn.innerHTML = "&times;";
             removeBtn.className =
                 "absolute top-0 right-0 bg-white text-red-600 rounded-full w-6 h-6 text-xs flex items-center justify-center shadow hover:bg-red-100";
-            removeBtn.addEventListener("click", () => {
-                selectedFiles.splice(index, 1);
-                const dataTransfer = new DataTransfer();
-                selectedFiles.forEach((f) => dataTransfer.items.add(f));
-                imageInput.files = dataTransfer.files;
-                imageInput.dispatchEvent(new Event("change"));
+            removeBtn.setAttribute("data-index", index);
 
-                // Jika tidak ada file tersisa, tampilkan upload awal lagi
-                if (selectedFiles.length === 0) {
-                    uploadSection.classList.remove("hidden");
-                    addMoreSection.classList.add("hidden");
-                }
+            removeBtn.addEventListener("click", (event) => {
+                const removeIndex = parseInt(
+                    event.target.getAttribute("data-index")
+                );
+                selectedFiles.splice(removeIndex, 1);
+
+                const updatedTransfer = new DataTransfer();
+                selectedFiles.forEach((f) => updatedTransfer.items.add(f));
+                imageInput.files = updatedTransfer.files;
+
+                renderPreviews(); // render ulang, tanpa trigger event change
             });
 
             wrapper.appendChild(img);
@@ -58,4 +50,24 @@ imageInput.addEventListener("change", function (e) {
 
         reader.readAsDataURL(file);
     });
+
+    // Show/hide section sesuai state
+    if (selectedFiles.length > 0) {
+        uploadSection.classList.add("hidden");
+        addMoreSection.classList.remove("hidden");
+    } else {
+        uploadSection.classList.remove("hidden");
+        addMoreSection.classList.add("hidden");
+    }
+}
+
+imageInput.addEventListener("change", function (e) {
+    const newFiles = Array.from(e.target.files);
+    selectedFiles = selectedFiles.concat(newFiles); // gabung lama + baru
+
+    const dataTransfer = new DataTransfer();
+    selectedFiles.forEach((f) => dataTransfer.items.add(f));
+    imageInput.files = dataTransfer.files;
+
+    renderPreviews(); // tampilkan semua gambar
 });

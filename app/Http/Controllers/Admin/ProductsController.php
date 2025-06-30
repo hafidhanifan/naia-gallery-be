@@ -5,6 +5,7 @@ use App\Models\Dress;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\DressImage;
 
 
 class ProductsController extends Controller {
