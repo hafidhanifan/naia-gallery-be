@@ -51,7 +51,7 @@ class ProductsController extends Controller {
             }
         }
 
-        return redirect()->route('productsPage')->with('success', 'The product has been added successfully!');
+        return redirect()->route('DressPage')->with('success', 'The product has been added successfully!');
     }
 
     public function editDress(Request $request, $id) {
