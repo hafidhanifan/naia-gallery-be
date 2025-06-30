@@ -411,15 +411,25 @@
                                     accept="image" />
                             </label>
                         </div>
-                        <!-- Section muncul setelah gambar dipilih -->
-                        <div id="addMoreSection" class="hidden mt-4">
-                            <button type="button" onclick="imageInput.click()" class="text-pink-600 underline">
-                                Add more images
-                            </button>
+
+                        <!-- Image Preview Section -->
+                        <div id="previewContainer" class="mt-4 grid grid-cols-3 gap-4">
+                            <!-- JS akan generate gambar di sini -->
+
+                            <!-- Add More Images Button -->
+                            <div id="addMoreSection" class="hidden">
+                                <button type="button" onclick="imageInput.click()"
+                                    class="w-full h-32 border-2 border-dashed border-gray-300 flex flex-col justify-center items-center hover:bg-gray-50 rounded">
+                                    <svg class="w-8 h-8 text-gray-400 mb-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                                    </svg>
+                                    <span class="text-pink-600 text-sm">Add more images</span>
+                                </button>
+                            </div>
                         </div>
 
-                        {{-- Image Preview Section --}}
-                        <div id="previewContainer" class="mt-4 grid grid-cols-3 gap-4"></div>
                     </div>
             </div>
             <!-- Modal footer -->
