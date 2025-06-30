@@ -395,19 +395,28 @@
                         </div>
                     </div>
                     <div class="flex justify-center items-center mt-4 w-full">
-                        <label
-                            class="flex flex-col w-full h-32 rounded border-2 border-gray-300 border-dashed cursor-pointer hover:bg-gray-50">
-                            <div class="flex flex-col justify-center items-center pt-5 pb-6">
-                                <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
-                                </svg>
-                                <p class="py-1 text-sm text-gray-600">Upload a file or drag and drop</p>
-                                <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
-                            </div>
-                            <input type="file" name="image" class="hidden" />
-                        </label>
+                        <div id="uploadSection" class="flex flex-col w-full">
+                            <label
+                                class="flex flex-col w-full h-32 rounded border-2 border-gray-300 border-dashed cursor-pointer hover:bg-gray-50">
+                                <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                    <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                                    </svg>
+                                    <p class="py-1 text-sm text-gray-600">Upload a file or drag and drop</p>
+                                    <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                                </div>
+                                <input type="file" name="images[]" id="imageInput" class="hidden" multiple
+                                    accept="image" />
+                            </label>
+                        </div>
+                        <!-- Section muncul setelah gambar dipilih -->
+                        <div id="addMoreSection" class="hidden mt-4">
+                            <button type="button" onclick="imageInput.click()" class="text-pink-600 underline">
+                                Add more images
+                            </button>
+                        </div>
 
                         {{-- Image Preview Section --}}
                         <div id="previewContainer" class="mt-4 grid grid-cols-3 gap-4"></div>
