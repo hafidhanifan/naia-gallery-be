@@ -395,6 +395,10 @@
                         </div>
                     </div>
                     <div class="flex justify-center items-center mt-4 w-full">
+                        <input type="file" name="images[]" id="imageInput" class="hidden" multiple accept="image/*">
+                        <input type="hidden" name="main_image_index" id="mainImageIndex" value="0">
+
+                        {{-- Image upload section --}}
                         <div id="uploadSection" class="flex flex-col w-full">
                             <label
                                 class="flex flex-col w-full h-32 rounded border-2 border-gray-300 border-dashed cursor-pointer hover:bg-gray-50">
@@ -415,7 +419,6 @@
                         <!-- Image Preview Section -->
                         <div id="previewContainer" class="mt-4 grid grid-cols-3 gap-4">
                             <!-- JS akan generate gambar di sini -->
-
                             <!-- Add More Images Button -->
                             <div id="addMoreSection" class="hidden">
                                 <button type="button" onclick="imageInput.click()"
