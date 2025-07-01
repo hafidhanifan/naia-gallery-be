@@ -18,12 +18,15 @@ class ProductsController extends Controller {
     public function addDress(Request $request) {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'category_id' => 'required|exists:categories,id', // validasi foreign key
+            'category_id' => 'required|exists:categories,id',
             'description' => 'nullable|string',
             'price_per_day' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
             'images.*' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'main_image_index' => 'nullable|integer|min:0',
         ]);
+
+        $mainImageIndex = $request->input('main_image_index', 0);
 
         $dress = Dress::create([
             'name' => $validated['name'],
@@ -31,19 +34,17 @@ class ProductsController extends Controller {
             'description' => $validated['description'] ?? null,
             'price_per_day' => $validated['price_per_day'],
             'stock' => $validated['stock'],
-            'image' => null, // gambar utama nanti di-set setelah upload
+            'image' => null, // nanti update setelah tahu gambar utama
         ]);
 
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $index => $image) {
                 $path = $image->store('dresses', 'public');
 
-                // Gambar pertama disimpan sebagai gambar utama di table `dresses`
-                if ($index === 0) {
-                    $dress->update(['image' => $path]);
+                if ($index == $mainImageIndex) {
+                    $dress->update(['image' => $path]); // gambar utama
                 }
 
-                // Semua gambar disimpan di table dress_images
                 DressImage::create([
                     'dress_id' => $dress->id,
                     'image_path' => $path,
